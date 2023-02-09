@@ -9,8 +9,3 @@
 [dbserves]
 172.31.42.21
 
-[webservers:vars]
-myubuntupack=apache
-myredhatpack=httpd
-myubuntujavapack=openjdk-8-jdk
-myredhatjavapack=java-1.8.0-openjdk
