@@ -1,0 +1,17 @@
+---
+- hosts: 
+  become: yes
+  tasks:
+  - name: i want to install  tree on ubuntu
+    apt: 
+      name:
+      state: present
+    when: ansible_os_family =="Debian"
+    tags: mytreetagubuntu
+
+  - name: i wan to install tree on redhat
+    yum:
+      name:
+      state: present
+    when: ansible_os_family =="RedHat"
+    tags: mytreetagredhat      
