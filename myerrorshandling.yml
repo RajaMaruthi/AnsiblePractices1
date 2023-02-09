@@ -5,7 +5,7 @@
   - name: i want to install java on ubuntu
     apt: 
       name: "{{myubuntujavapack}}"
-      statess: present
+      state: present
     when: ansible_os_family =="Debian"
     ignore_errors: yes
 
