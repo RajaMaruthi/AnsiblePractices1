@@ -10,3 +10,16 @@
   - name: i want to display result
     debug:
        msg: "{{myfirstresult}}"  
+
+
+  - name: i want to install wget on ubuntu
+    apt:
+      name: wget
+      state: present
+    when: myfirstresult.stderr ==""
+
+  - name: i want to install git on ubuntu
+    apt:
+      name: git
+      state: present
+    when: myfirstresult.stderr !=""    
