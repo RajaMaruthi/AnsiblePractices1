@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: webservers
   become: yes
   tasks:
   - name: i want to install wget on ubuntu
@@ -13,4 +13,3 @@
       name: wget
       state: present
     when: ansible_os_family =="RedHat"
-          
