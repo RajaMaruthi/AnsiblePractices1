@@ -10,5 +10,5 @@
 172.31.42.21
 
 [webservers:vars]
-myubuntupack=apache2
+myubuntupack=apache222
 myredhatpack=httpd
