@@ -13,3 +13,21 @@
       name: wget
       state: present
     when: ansible_os_family =="RedHat"
+
+  - name: i want to install server on ubuntu 
+    apt: 
+      name:  "{{myubuntupack}}"
+      state: present
+    when: ansible_os_family =="Debian" 
+
+  - name: i want to install server on redhat
+    yum:
+      name: "{{myredhatpack}}"   
+      state: present
+    when: ansible_os_family =="RedHat"   
+
+  - name: i want to start the server on redhat
+    service:
+        name: "{{myredhatpack}}"
+        state: started
+    when: ansible_os_family =="RedHat"    
