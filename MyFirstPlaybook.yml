@@ -1,5 +1,5 @@
 ---
-- hosts: webservers
+- hosts: 172.31.41.23
   become: yes
   tasks:
   - name: i want to install wget on ubuntu
